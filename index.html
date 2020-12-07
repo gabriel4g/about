@@ -10,6 +10,19 @@
         body {
             background-color: #f1f1f1;
         }
+
+        @media only screen and (max-width: 600px) {
+            .texto {
+                width: 22em; 
+                word-wrap: normal;
+            }
+
+            .principal {
+                width: 14em; 
+                word-wrap: normal;
+            }
+        }
+
         i {
             margin-right: 4pt;
             padding: 4pt;
@@ -41,18 +54,21 @@
             <hr>
             <img src="public/images/me.jpg" alt="me" width="150" height="150"
                 style="border-radius: 50%;">
-            <div style="float: right; text-align: right; width: 20em; word-wrap: normal;">
+            <div style="float: right; text-align: right; ">
                 <dt><b>Atualmente</b></dt>
-                <dd>Atualmente estou desenvolvendo meu projeto particular, <a href="https://github.com/gabriel4g/chat-pipoca">chat-pipocaJS</a></dd>
+                <dd class="principal">
+                    Atualmente estou desenvolvendo meu projeto particular, 
+                    <a href="https://github.com/gabriel4g/chat-pipoca">chat-pipocaJS</a>.
+                </dd>
                 <dt><b>Cidade</b></dt>
-                <dd>Cabo de Santo agostinho - PE</dd>
+                <dd>Cabo de Santo agostinho - PE.</dd>
                 
             </div>
     </div>
     <div class="shadow p-3 mb-5 bg-white rounded" style="margin-top: 2%;">
         <h2 style="font-weight: bolder;">Sobre</h2>
         <hr>
-        <div style=" width: 32em; word-wrap: normal;">
+        <div class="texto">
             <dt><b>desenvolvendo</b></dt>
             <dd>
                 Atualmente estou estudando JavaScript, tendo como foco no desenvolvendo 
