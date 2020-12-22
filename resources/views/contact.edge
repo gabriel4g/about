@@ -1,0 +1,15 @@
+@layout('layout/app')
+
+@section('content')
+<div class="container">
+  <div class="shadow p-3 mb-5 bg-white rounded" style="margin-top: 2%;">
+    <h2 style="font-weight: bolder; text-align: center;">Contact</h2>
+    <hr>
+    <form action="/send" method="POST">
+      <input type="text" name="name" id="" placeholder="Your Name">
+      <textarea name="text" id="" cols="30" rows="10" maxlength="255" placeholder="Message to be sent."></textarea>
+      <button type="submit" class="btn btn-primary btn-style">submit</button>
+    </form>
+  <div>
+</div>
+@endsection

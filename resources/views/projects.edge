@@ -1,0 +1,32 @@
+@layout('layout/app')
+
+@section('content')
+<div class="container">
+  <div class="shadow p-3 mb-5 bg-white rounded" style="margin-top: 2%;">
+    <h2 style="font-weight: bolder;">Current projects</h2>
+    <hr>
+    <div class="texto">
+      @each(item in projects)
+        <dt>
+          <b>{{ item.name }} -
+            @if(item.github != null)
+              <a target="_blank" href="{{ item.github }}">
+                <i class="fab fa-github"></i>
+              </a>
+            @endif
+            @if(item.link != null)
+              <a target="_blank" href="{{ item.link }}">
+                <i class="fas fa-link"></i>
+              </a>
+            @endif
+          </b>
+        </dt>
+    <dd>
+        {{ item.text }}
+    </dd>
+
+      @endeach
+    </div>
+  </div>
+</div>
+@endsection
