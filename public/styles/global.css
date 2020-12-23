@@ -5,6 +5,12 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+@media only screen and (min-width: 600px) {
+  .navbar-screen {
+    margin-right: 60%;
+  }
+}
+
 img {
   padding: 4pt;
   width: 30px;
@@ -46,7 +52,7 @@ input, option, textarea {
     background-color:white;
     margin: 0 auto;
     margin-top: 2%;
-    width: 70%;
+    width: 90%;
 }
 
 .btn-style {
