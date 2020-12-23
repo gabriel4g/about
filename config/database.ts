@@ -7,7 +7,6 @@
 
 import Env from '@ioc:Adonis/Core/Env'
 import { OrmConfig } from '@ioc:Adonis/Lucid/Orm'
-import Application from '@ioc:Adonis/Core/Application'
 import { DatabaseConfig } from '@ioc:Adonis/Lucid/Database'
 
 const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
@@ -26,21 +25,24 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
   connections: {
     /*
     |--------------------------------------------------------------------------
-    | SQLite
+    | MySQL config
     |--------------------------------------------------------------------------
     |
-    | Configuration for the SQLite database.  Make sure to install the driver
+    | Configuration for MySQL database. Make sure to install the driver
     | from npm when using this connection
     |
-    | npm i sqlite3
+    | npm i mysql
     |
     */
-    sqlite: {
-      client: 'sqlite',
+    mysql: {
+      client: 'mysql',
       connection: {
-        filename: Env.get('SQLITE_FILE')
+        host: Env.get('MYSQL_HOST'),
+        port: Env.get('MYSQL_PORT'),
+        user: Env.get('MYSQL_USER'),
+        password: Env.get('MYSQL_PASSWORD', ''),
+        database: Env.get('MYSQL_DB_NAME'),
       },
-      useNullAsDefault: true,
       healthCheck: false,
 			debug: false,
     },
